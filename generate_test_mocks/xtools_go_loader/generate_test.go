@@ -19,7 +19,7 @@ import (
 	"testing"
 
 	. "github.com/onsi/ginkgo/v2"
-	"github.com/petergtz/pegomock/v4/pegomock/filehandling"
+	"github.com/phildrip/pegomock/v4/pegomock/filehandling"
 )
 
 func TestMockGeneration(t *testing.T) {
@@ -28,12 +28,12 @@ func TestMockGeneration(t *testing.T) {
 
 var _ = It("Generate mocks", func() {
 	filehandling.GenerateMockFile(
-		[]string{"github.com/petergtz/pegomock/v4/test_interface", "Display"},
+		[]string{"github.com/phildrip/pegomock/v4/test_interface", "Display"},
 		"../../mock_display_test.go", "MockDisplay", "pegomock_test",
 		"", false, os.Stdout)
 
 	filehandling.GenerateMockFile(
-		[]string{"github.com/petergtz/pegomock/v4/test_interface", "GenericDisplay"},
+		[]string{"github.com/phildrip/pegomock/v4/test_interface", "GenericDisplay"},
 		"../../mock_generic_display_test.go", "MockGenericDisplay", "pegomock_test",
 		"", false, os.Stdout)
 })

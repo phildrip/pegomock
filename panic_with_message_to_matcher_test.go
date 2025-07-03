@@ -6,7 +6,7 @@ import (
 
 	"github.com/onsi/gomega/format"
 	"github.com/onsi/gomega/types"
-	"github.com/petergtz/pegomock/v4/internal/verify"
+	"github.com/phildrip/pegomock/v4/internal/verify"
 )
 
 type PanicWithMessageToMatcher struct {

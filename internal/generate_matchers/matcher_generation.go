@@ -9,7 +9,7 @@ import (
 
 // Generate matchers:
 //
-//     go generate github.com/petergtz/pegomock/v4/internal/generate_matchers
+//     go generate github.com/phildrip/pegomock/v4/internal/generate_matchers
 
 //go:generate go run matcher_generation.go
 //go:generate go fmt ../../matcher_factories.go
@@ -95,7 +95,7 @@ func GenerateGinkgoMatchersFile() string {
 	contents := `package mock
 
 import (
-	"github.com/petergtz/pegomock/v4"
+	"github.com/phildrip/pegomock/v4"
 )
 
 var (`

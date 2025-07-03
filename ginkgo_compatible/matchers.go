@@ -1,7 +1,7 @@
 package mock
 
 import (
-	"github.com/petergtz/pegomock/v4"
+	"github.com/phildrip/pegomock/v4"
 )
 
 var (

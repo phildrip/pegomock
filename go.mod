@@ -2,13 +2,10 @@ module github.com/phildrip/pegomock/v4
 
 go 1.23.0
 
-replace github.com/petergtz/pegomock/v4 => .
-
 require (
 	github.com/alecthomas/kingpin/v2 v2.4.0
 	github.com/onsi/ginkgo/v2 v2.23.4
 	github.com/onsi/gomega v1.37.0
-	github.com/petergtz/pegomock/v4 v4.1.0
 	github.com/samber/lo v1.51.0
 	golang.org/x/tools v0.34.0
 )

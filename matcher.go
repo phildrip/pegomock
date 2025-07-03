@@ -6,7 +6,7 @@ import (
 
 	"sync"
 
-	"github.com/petergtz/pegomock/v4/internal/verify"
+	"github.com/phildrip/pegomock/v4/internal/verify"
 )
 
 type EqMatcher struct {

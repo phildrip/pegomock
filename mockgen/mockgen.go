@@ -29,11 +29,11 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/petergtz/pegomock/v4/model"
+	"github.com/phildrip/pegomock/v4/model"
 	"github.com/samber/lo"
 )
 
-const mockFrameworkImportPath = "github.com/petergtz/pegomock/v4"
+const mockFrameworkImportPath = "github.com/phildrip/pegomock/v4"
 
 func GenerateOutput(ast *model.Package, source, nameOut, packageOut, selfPackage string) []byte {
 	g := generator{}

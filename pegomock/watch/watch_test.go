@@ -22,8 +22,8 @@ import (
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	. "github.com/petergtz/pegomock/v4/pegomock/testutil"
-	"github.com/petergtz/pegomock/v4/pegomock/watch"
+	. "github.com/phildrip/pegomock/v4/pegomock/testutil"
+	"github.com/phildrip/pegomock/v4/pegomock/watch"
 )
 
 var (
@@ -46,7 +46,7 @@ var _ = Describe("NewMockFileUpdater", func() {
 		Expect(os.MkdirAll(packageDir, 0755)).To(Succeed())
 		subPackageDir = joinPath(packageDir, "subpackage")
 		Expect(os.MkdirAll(subPackageDir, 0755)).To(Succeed())
-		vendorPackageDir = joinPath(packageDir, "vendor", "github.com", "petergtz", "vendored_package")
+		vendorPackageDir = joinPath(packageDir, "vendor", "github.com", "phildrip", "vendored_package")
 		Expect(os.MkdirAll(vendorPackageDir, 0755)).To(Succeed())
 
 		var e error
@@ -61,7 +61,7 @@ var _ = Describe("NewMockFileUpdater", func() {
 		WriteFile(joinPath(vendorPackageDir, "iface.go"),
 			`package vendored_package; type Interface interface{ Foobar() }`)
 		WriteFile(joinPath(packageDir, "vendordisplay.go"), `package pegomocktest
-			import ( "github.com/petergtz/vendored_package" )
+			import ( "github.com/phildrip/vendored_package" )
 			type VendorDisplay interface { Show(something vendored_package.Interface) }`)
 
 	})
@@ -108,14 +108,14 @@ var _ = Describe("NewMockFileUpdater", func() {
 
 		Context(`and specifying the vendor path`, func() {
 
-			It(`Eventually creates a file containing the import ( vendored_package "github.com/petergtz/vendored_package" )'`, func() {
+			It(`Eventually creates a file containing the import ( vendored_package "github.com/phildrip/vendored_package" )'`, func() {
 				WriteFile(joinPath(packageDir, "interfaces_to_mock"), "VendorDisplay")
 
 				watch.NewMockFileUpdater([]string{packageDir}, false).Update()
 
 				Expect(joinPath(packageDir, "mock_vendordisplay_test.go")).To(SatisfyAll(
 					BeAnExistingFile(),
-					BeAFileContainingSubString(`vendored_package "github.com/petergtz/vendored_package"`)))
+					BeAFileContainingSubString(`vendored_package "github.com/phildrip/vendored_package"`)))
 			})
 		})
 

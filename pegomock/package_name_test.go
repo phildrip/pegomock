@@ -4,11 +4,11 @@ import (
 	"go/build"
 	"os"
 
-	. "github.com/petergtz/pegomock/v4/pegomock/testutil"
+	. "github.com/phildrip/pegomock/v4/pegomock/testutil"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	main "github.com/petergtz/pegomock/v4/pegomock"
+	main "github.com/phildrip/pegomock/v4/pegomock"
 )
 
 var _ = Describe("DetermineBla", func() {

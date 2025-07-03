@@ -1,6 +1,6 @@
 <div align="right">
 
-[![Unit tests](https://github.com/petergtz/pegomock/actions/workflows/run-tests.yml/badge.svg)](https://github.com/petergtz/pegomock/actions/workflows/run-tests.yml)
+[![Unit tests](https://github.com/phildrip/pegomock/actions/workflows/run-tests.yml/badge.svg)](https://github.com/phildrip/pegomock/actions/workflows/run-tests.yml)
 
 </div>
 
@@ -14,8 +14,8 @@ Installing Pegomock
 Pegomock consists of a binary `pegomock` and a package. Install both via:
 
 ```shell
-go install github.com/petergtz/pegomock/v4/pegomock@latest
-go get github.com/petergtz/pegomock/v4@latest
+go install github.com/phildrip/pegomock/v4/pegomock@latest
+go get github.com/phildrip/pegomock/v4@latest
 ```
 
 This will download the package and install an executable `pegomock` in the directory named by the `$GOBIN` environment variable, which defaults to `$GOPATH/bin` or `$HOME/go/bin` if the `$GOPATH` environment variable is not set.
@@ -25,9 +25,9 @@ The `pegomock` binary is used to generate mocks and to watch over changes in int
 
 See also section [Tracking the pegomock tool in your project](#tracking-the-pegomock-tool-in-your-project) for a per-project control of the tool version.
 
-For migration from Pegomock v1/v2 to v3, see [Migration notes in v3 release description](https://github.com/petergtz/pegomock/releases/tag/v3.0.0).
+For migration from Pegomock v1/v2 to v3, see [Migration notes in v3 release description](https://github.com/phildrip/pegomock/releases/tag/v3.0.0).
 
-For migration from Pegomock v3 to v4, see [Migration notes in v4 release description](https://github.com/petergtz/pegomock/releases/tag/v4.0.0).
+For migration from Pegomock v3 to v4, see [Migration notes in v4 release description](https://github.com/phildrip/pegomock/releases/tag/v4.0.0).
 
 Getting Started
 ===============
@@ -39,7 +39,7 @@ The preferred way is:
 
 ```go
 import (
-	"github.com/petergtz/pegomock/v4"
+	"github.com/phildrip/pegomock/v4"
 	"testing"
 )
 
@@ -88,7 +88,7 @@ package some_test
 
 import (
 	. "github.com/onsi/ginkgo"
-	. "github.com/petergtz/pegomock/v4/ginkgo_compatible"
+	. "github.com/phildrip/pegomock/v4/ginkgo_compatible"
 )
 
 var _ = Describe("Some function", func() {
@@ -408,7 +408,7 @@ Installation
 Install it via:
 
 ```shell
-go install github.com/petergtz/pegomock/v4/pegomock@latest
+go install github.com/phildrip/pegomock/v4/pegomock@latest
 ```
 
 Tracking the pegomock tool in your project
@@ -427,7 +427,7 @@ Go modules allow to pin not only a package but also a tool (that is, an executab
 package tools
 
 import (
-	_ "github.com/petergtz/pegomock/v4/pegomock"
+	_ "github.com/phildrip/pegomock/v4/pegomock"
 )
 ```
 2. Set `$GOBIN` to a `bin` directory relative to your repo (this defines where tool dependencies will be installed).
@@ -435,7 +435,7 @@ import (
 ```console
 $ cd /path/to/myproject
 $ export GOBIN=$PWD/bin
-$ go install github.com/petergtz/pegomock/v4/pegomock
+$ go install github.com/phildrip/pegomock/v4/pegomock
 ```
 3. Use that `$GOBIN` when invoking `pegomock` for that project:
 ```console
@@ -456,7 +456,7 @@ Generating Mocks
 
 To generate mocks, invoke Pegomock like this:
 
-```shell 
+```shell
 pegomock generate [<flags>] [<packagepath>] <interfacename>
 ```
 
@@ -491,7 +491,7 @@ What are the benefits?
 What are the drawbacks?
 - There is only one drawback: maturity. The new implementation is not complete yet, and also might have some bugs that still need to be fixed.
 
-Users of Pegomock are encouraged to use this new option and report any problems by [opening an issue](https://github.com/petergtz/pegomock/issues/new). Help to stabilize it is greatly appreciated.
+Users of Pegomock are encouraged to use this new option and report any problems by [opening an issue](https://github.com/phildrip/pegomock/issues/new). Help to stabilize it is greatly appreciated.
 
 Generating mocks with `go generate`
 ----------------------------------

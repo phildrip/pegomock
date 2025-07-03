@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/petergtz/pegomock/v4/mockgen"
-	"github.com/petergtz/pegomock/v4/modelgen/xtools_packages"
+	"github.com/phildrip/pegomock/v4/mockgen"
+	"github.com/phildrip/pegomock/v4/modelgen/xtools_packages"
 )
 
 func GenerateMockFileInOutputDir(

@@ -23,8 +23,8 @@ import (
 
 	"github.com/alecthomas/kingpin/v2"
 
-	"github.com/petergtz/pegomock/v4/pegomock/filehandling"
-	"github.com/petergtz/pegomock/v4/pegomock/util"
+	"github.com/phildrip/pegomock/v4/pegomock/filehandling"
+	"github.com/phildrip/pegomock/v4/pegomock/util"
 )
 
 const wellKnownInterfaceListFile = "interfaces_to_mock"

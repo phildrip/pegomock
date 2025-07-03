@@ -17,8 +17,8 @@ package modelgen_test
 import (
 	"testing"
 
-	"github.com/petergtz/pegomock/v4/model"
-	"github.com/petergtz/pegomock/v4/modelgen/xtools_packages"
+	"github.com/phildrip/pegomock/v4/model"
+	"github.com/phildrip/pegomock/v4/modelgen/xtools_packages"
 
 	"github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/ginkgo/v2"
@@ -40,7 +40,7 @@ func (a alphabetically) Less(i, j int) bool { return a[i].Name < a[j].Name }
 var _ = Describe("xtools_packages", func() {
 
 	It("generates a model with the basic properties", func() {
-		pkg, e := xtools_packages.GenerateModel("github.com/petergtz/pegomock/v4/modelgen/test_data/default_test_interface", "Display")
+		pkg, e := xtools_packages.GenerateModel("github.com/phildrip/pegomock/v4/modelgen/test_data/default_test_interface", "Display")
 		Expect(e).NotTo(HaveOccurred())
 
 		Expect(pkg.Name).To(Equal("test_interface"))

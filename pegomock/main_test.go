@@ -26,9 +26,9 @@ import (
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	main "github.com/petergtz/pegomock/v4/pegomock"
+	main "github.com/phildrip/pegomock/v4/pegomock"
 
-	. "github.com/petergtz/pegomock/v4/pegomock/testutil"
+	. "github.com/phildrip/pegomock/v4/pegomock/testutil"
 
 	"testing"
 )
@@ -57,7 +57,7 @@ var _ = Describe("CLI", func() {
 		Expect(os.MkdirAll(packageDir, 0755)).To(Succeed())
 		subPackageDir = joinPath(packageDir, "subpackage")
 		Expect(os.MkdirAll(subPackageDir, 0755)).To(Succeed())
-		//vendorPackageDir = joinPath(packageDir, "vendor", "github.com", "petergtz", "vendored_package")
+		//vendorPackageDir = joinPath(packageDir, "vendor", "github.com", "phildrip", "vendored_package")
 		//Expect(os.MkdirAll(vendorPackageDir, 0755)).To(Succeed())
 
 		origWorkingDir, e = os.Getwd()
@@ -70,7 +70,7 @@ var _ = Describe("CLI", func() {
 					go 1.18
 					require (
 						github.com/onsi/gomega v1.27.6 // indirect
-						github.com/petergtz/pegomock/v4 v4.0.0
+						github.com/phildrip/pegomock/v4 v4.0.0
 					)`)
 
 		WriteFile(joinPath(packageDir, "mydisplay.go"),
